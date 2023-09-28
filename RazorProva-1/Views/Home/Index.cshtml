@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Esercizi di prova</h1>
+    <p><strong>Creare una funzione che prende due numeri e ne restituisca la somma. Stampare dentro span il risultato</strong></p>
+
+    @{
+        int Somma(int num1, int num2)
+        {
+            int result = num1 + num2;
+            return result;
+        }
+    }
+
+    <span>La somma di 10 e 5 fa: @Somma(10, 5)</span>
+</div>
+
+<div>
+    <p><strong>Creare un array di stringhe contententi nomi di persona e stamparlo in pagina</strong></p>
+    @{
+        string[] nomi = new string[] { "Luca", "Paolo", "Martina", "Giovanna" };
+    }
+    <p>La lista dei nomi è:</p>
+    <ul>
+        @foreach(string nome in nomi)
+        {
+            <li>@nome</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <p><strong>Creare una lista di 20 numeri interi (generati random tra 1 e 100, inclusi) e mostrarli solo se superiori a 30</strong></p>
+    @{
+        List<int> interi = new List<int>();
+        Random random = new Random();
+
+        for(int i = 0; i < 20; i++)
+        {
+            int numeroRandom = random.Next(1, 101);
+            interi.Add(numeroRandom);
+        }
+    }
+    @foreach(int interoDaStampare in interi)
+    {
+        @if(interoDaStampare > 30)
+        {
+            <span>@interoDaStampare</span>
+        }
+    }
+</div>
+
+<div>
+    <p><strong>Creare </strong></p>
+</div>
