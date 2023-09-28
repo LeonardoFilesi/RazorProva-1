@@ -1,9 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
 <div class="text-center">
     <h1>Esercizi di prova</h1>
+</div>
+
+<div>
     <p><strong>Creare una funzione che prende due numeri e ne restituisca la somma. Stampare dentro span il risultato</strong></p>
 
     @{
@@ -53,5 +55,15 @@
 </div>
 
 <div>
-    <p><strong>Creare </strong></p>
+    <p><strong>Stampare in pagina data attuale (con DateTime)</strong></p>
+    @{
+        DateTime dataOggi = DateTime.Now;
+    }
+    <p>@dataOggi.ToString("dd/MM/yyyy");</p>
+</div>
+
+<div>
+    <p><strong>Stampare in pagina data di domani (con DateTime)</strong></p>
+ 
+    <p>@dataOggi.AddDays(1).ToString("dd/MM/yyyy");</p>
 </div>
